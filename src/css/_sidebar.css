@@ -1,0 +1,27 @@
+.sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  height: 100%;
+  padding: var(--space-m-l);
+  background-color: var(--base-color-05-tint);
+}
+
+@media screen and (min-width: 468px) {
+  .sidebar {
+    text-align: right;
+  }
+}
+
+.sidebar__section:not(:first-child) {
+  border-top: 1px solid var(--base-color-20-tint);
+  padding-block: var(--space-m-l);
+  margin-top: var(--space-m-l);
+}
+
+.sidebar__requirements {
+  a[aria-current="true"] {
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+}

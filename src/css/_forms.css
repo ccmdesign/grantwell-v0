@@ -27,7 +27,7 @@ so we can ignore the csslint warning.
   .form textarea {
     padding: 0.5em 0.6em;
     display: inline-block;
-    border: 1px solid #eee;
+    border: 2px solid var(--primary-color);
     box-shadow: var(--box-shadow-inset);
     border-radius: var(--border-radius-s);
     vertical-align: middle;
@@ -189,47 +189,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
   .form-stacked textarea {
     display: block;
     margin: 0.25em 0;
-  }
-
-  /*
-Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
-since IE8 won't execute CSS that contains a CSS3 selector.
-*/
-  /* .form-stacked input:not([type]) {
-  display: block;
-  margin: 0.25em 0;
-} */
-  .form-aligned input,
-  .form-aligned textarea,
-  .form-aligned select,
-  .form-message-inline {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  .form-aligned textarea {
-    vertical-align: top;
-  }
-
-  /* Aligned Forms */
-  .form-aligned .control-group {
-    margin-bottom: 0.5em;
-  }
-  .form-aligned .control-group label {
-    text-align: right;
-    display: inline-block;
-    vertical-align: middle;
-    width: 10em;
-    margin: 0 1em 0 0;
-  }
-  .form-aligned .controls {
-    margin: 1.5em 0 0 11em;
-  }
-
-  /* Rounded Inputs */
-  .form input.input-rounded,
-  .form .input-rounded {
-    border-radius: 2em;
-    padding: 0.5em 1em;
   }
 
   /* Grouped Inputs */

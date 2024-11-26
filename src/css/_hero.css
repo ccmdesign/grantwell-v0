@@ -1,0 +1,51 @@
+.hero {
+  background-color: var(--base-color-02-tint);
+  padding-block: var(--space-2xl-3xl);
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 30svh;
+    gap: var(--space-l-xl);
+    align-items: center;
+  }
+
+  .form {
+    max-width: 700px;
+    width: 100%;
+  }
+}
+
+.brand {
+  > * {
+    max-width: 350px;
+    margin-inline: auto;
+    text-align: center;
+    margin-top: var(--space-m-l);
+  }
+
+  img {
+    flex: 0;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tagline {
+    flex: 1;
+    max-width: 30ch;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+}
+
+.search {
+  width: 100%;
+
+  input,
+  .button {
+    box-shadow: var(--box-shadow-m);
+    border: 2px solid var(--primary-color-20-tint);
+    background-color: var(--white-color);
+  }
+}

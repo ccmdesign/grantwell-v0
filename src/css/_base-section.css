@@ -1,0 +1,42 @@
+.base-section {
+  --_section-text-color: var(--primary-color);
+  --_section-padding-block: var(--space-xl-2xl);
+  padding-block: var(--_section-padding-block);
+
+  h2 {
+    text-align: center;
+    font-weight: 800;
+    color: var(--_section-text-color);
+  }
+
+  p {
+    color: var(--_section-text-color);
+  }
+
+  .button {
+    --_button-color: var(--_section-text-color);
+    --_button-text-color: var(--_section-text-color);
+  }
+}
+
+.base-section[data-color="primary-5"] {
+  background-color: var(--primary-color-05-tint);
+}
+
+.base-section[data-color="base-2"] {
+  background-color: var(--base-color-02-tint);
+}
+
+.base-section[data-color="primary"] {
+  --_section-text-color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.base-section[data-color="base"] {
+  --_section-text-color: var(--white-color);
+  background-color: var(--base-color);
+}
+
+.base-section[data-size="s"] {
+  --_section-padding-block: var(--space-s-m);
+}

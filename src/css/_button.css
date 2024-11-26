@@ -17,11 +17,11 @@
 
   --_button-color: hsla(var(--_button-hsl), 1);
   --_button-text-color: hsla(var(--_button-text-hsl), 1);
-  --_button-padding-block: var(--size--1);
-  --_button-padding-inline: var(--size-0);
+  --_button-padding-block: var(--space-2xs-xs);
+  --_button-padding-inline: var(--space-s-m);
 
   /* Optional Values */
-  --_button-border-radius: var(--border-radius-s); /* Fallback to 0 */
+  --_button-border-radius: 100px; /* Fallback to 0 */
   --_button-border-color: var(--_button-color); /* Fallback to 1px */
   --_button-border-width: 2px; /* Fallback to 1px */
   --_button-border-style: var(
@@ -51,13 +51,15 @@
   box-sizing: border-box;
   font-size: 1rem;
   text-decoration: none;
+  text-transform: uppercase;
+  transform: translateY(-1px);
   align-self: self-start;
   justify-self: flex-start;
   font-family: var(
     --_button-font-family,
     sans-serif
   ); /* Fallback to sans-serif */
-  font-weight: var(--_button-font-weight, 400);
+  font-weight: var(--_button-font-weight, 800);
   letter-spacing: var(--_button-letter-spacing);
 }
 

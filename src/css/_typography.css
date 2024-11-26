@@ -24,15 +24,16 @@
 
   h1 {
     font-size: var(--size-4);
-    font-weight: 100;
+    font-weight: 600;
   }
   h2 {
     font-size: var(--size-3);
-    font-weight: 100;
+    font-weight: 300;
   }
   h3 {
     font-size: var(--size-2);
-    font-weight: 400;
+    font-weight: 500;
+    color: var(--primary-color);
   }
   h4 {
     font-size: var(--size-1);
@@ -54,6 +55,7 @@
   a {
     color: var(--link-color, #007bff);
     text-decoration: none;
+    font-weight: inherit;
   }
 
   a:hover {
@@ -82,7 +84,7 @@
   input,
   button,
   a {
-    font-weight: 100;
+    font-weight: inherit;
   }
 
   strong {

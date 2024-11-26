@@ -90,7 +90,7 @@
     }
   }
 
-  .form-field .group {
+  .form .group {
     display: inline-flex;
     position: relative;
     gap: 0;
@@ -100,15 +100,16 @@
     }
   }
 
-  .form-field .group input[type="submit"],
-  .form-field .group button {
+  .form .group input[type="submit"],
+  .form .group button {
     flex: 0;
   }
 
-  .form-field .group :first-child {
+  .form .group :first-child {
+    margin-right: -2px;
     border-radius: var(--_input-border-radius) 0 0 var(--_input-border-radius) !important;
   }
-  .form-field .group :last-child {
+  .form .group :last-child {
     border-radius: 0 var(--_input-border-radius) var(--_input-border-radius) 0 !important;
   }
 

@@ -1,200 +1,26 @@
 ---
-layout: "_layouts/app.njk"
-doca_hidden: "true"
+layout: "_layouts/base.njk"
 ---
-
-
-
-<div id="feed" class="feed-page main-panel | stack">
-  
-  <div id="feed-header" class="stack">
-    <div id="header-tools" class="main-panel__controls | stack">
-      <h2>Controls</h2>
-      <button class="button" modal-target="janela-modal-check-in">Abrir modal</button>
-      {# <button id="abrir-modal-assistente-ia-feed">Prompt test</button> #}
-      {# <span id="botao-automaticas"><input type="checkbox" id="toggle-automaticas" checked="checked"/>
-        <label for="toggle-automaticas" class="button"></label>
-      </span> #}
-    </div>
-  </div>
-
-  <section class="stack">
-    <h2>Mensagens</h2>
-    <span id="feed-last-message-id" style="display: none">672917760000000000000000</span>
+<div class="app-layout">  
+  <header class="app-layout__top-bar">
+    {% include "top-bar.njk" %}
+  </header>
+  <main class="app-layout__main">
+    {% include "hero.njk" %}
     
-    <div id="feed-newer"><span id="unseen-counter"></span></div>
+    {% include "recent.njk" %} <!-- @ToDo: The Recent section only appears if the user has recent NOFOs. We never show an empty section -->
     
-    <div id="feed-messages" class="stack">
-      <article id="6729177113103009ceaee67c" class="feed-message card stack negocio" data-documento="61f92cdfc2c26c025b9be319">
-        <h3><a href="/negocio/99148/">RESIDENCIA THIAGO LOPES FERREIRA, Conceição da Barra, ES</a></h3>
-        <div class="feed-message__by-line">
-          <img src="https://cdn.montele.ficrm.com/pipedrive-logo.png" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:50.">04/11/2024 15:50</span>
-          <h2>Pipedrive Bot</h2>
-        </div>
-        <div class="markdown">Novo e-mail referente ao deal nº 32.373 - "Conversão / Conversão".
-          <ul>
-            <li>Assunto: <strong>Montele / Garantia de Fábrica - EQ.14470 - RESIDENCIA THIAGO LOPES FERREIRA</strong>
-            </li>
-            <li>De: manutencao@montele.com.br</li>
-            <li>Para: thiagolopesadvogado@outlook.com</li>
-            <li>Trecho: "Prezado Thiago, boa tarde. Esperamos que você esteja bem! Estamos entrando em contato para lembrar que faltam apenas 30 dias para o término dos 90 dias de garantia de fábrica do seu equipamento MONTELE. Queremos ".</li>
-          </ul>
-        </div>
-      </article>
-  
-      <article id="6729177113103009ceaee67b" class="feed-message card stack negocio" data-documento="526e5fb8faa319390b03dace">
-        <h3><a href="/negocio/46209/">IGREJA PRESBITERIANA DA MOOCA, São Paulo, SP</a></h3>
-        <div class="feed-message__by-line">
-          <img src="" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:50.">04/11/2024 15:50</span>
-          <h2>Diogenes Araujo</h2>
-        </div>
-        <div class="markdown">Enviei mensagem para a cliente solicitando o agendamento da manutenção preventiva referente a Novembro de 2024, a ser realizada no dia 10/09, em horário comercial. Aguardando retorno.</div>
-      </article>  
-      
-      <article id="6729176c13103009ceaee679" class="feed-message card stack negocio" data-documento="61f92cdfc2c26c025b9be319">
-        <h3><a href="/negocio/99148/">RESIDENCIA THIAGO LOPES FERREIRA, Conceição da Barra, ES</a></h3>
-        <div class="feed-message__by-line">
-          <img src="https://cdn.montele.ficrm.com/pipedrive-logo.png" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:50.">04/11/2024 15:50</span>
-          <h2>Pipedrive Bot</h2>
-        </div>
-        <div class="markdown">Nova atividade referente ao deal nº 32.373 - "Conversão / Conversão".
-          <ul>
-            <li>Responsável: <strong>Raquel Linhares</strong></li>
-            <li>Assunto: <strong>Garantia 90</strong></li>
-            <li>Agendamento: <strong>23/12/2024</strong></li>
-          </ul>
-        </div>
-      </article>
-
-      <article id="6729175e13103009ceaee676" class="feed-message card stack negocio" data-documento="61f92cdfc2c26c025b9be319">
-        <h3><a href="/negocio/99148/">RESIDENCIA THIAGO LOPES FERREIRA, Conceição da Barra, ES</a></h3>
-        <div class="feed-message__by-line">
-          <img src="https://cdn.montele.ficrm.com/pipedrive-logo.png" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:50.">04/11/2024 15:50</span>
-          <h2>Pipedrive Bot</h2>
-        </div>
-        <div class="markdown">Atualização em atividade referente ao deal nº 32.373 - "Conversão / Conversão".
-          <ul>
-            <li>Assunto: <strong>Garantia 60</strong></li>
-          </ul>
-          <strong>Atividade concluída</strong>.
-        </div>
-      </article>
-
-      <article id="6729175313103009ceaee671" class="feed-message card stack negocio" data-documento="66f59fc37c86327b0950804b">
-        <h3><a href="/negocio/116852/">RESIDENCIA - MARIA EDUARDA BAUEN, Bragança Paulista, SP</a></h3>
-        <div class="feed-message__by-line">
-          <img src="" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:49.">04/11/2024 15:49</span>
-          <h2>Caroline Moro</h2>
-        </div>
-        <div class="markdown">Follow-up <strong>criado</strong>.
-          <ul>
-            <li>Responsável: <strong>Caroline Moro</strong>.</li>
-            <li>Objetivo: <strong>Contato</strong>.</li>
-            <li>Data do agendamento: <strong>4 de Fevereiro de 2025 às 17:00</strong>.</li>
-          </ul>
-          <p></p>
-        </div>
-      </article>
-      
-      <article id="6729171d13103009ceaee668" class="feed-message card stack negocio" data-documento="66630e0764fe07d3baf2e89d">
-        <h3><a href="/negocio/114879/">GRUPO BIMBO - PREDIO NACIONAL, São Paulo, SP</a></h3>
-        <div class="feed-message__by-line">
-          <img src="" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:49.">04/11/2024 15:49</span>
-          <h2>Pamela Bonfim</h2>
-        </div>
-        <div class="markdown">Follow-up <strong>concluído</strong>.
-          <ul>
-            <li>Responsável: <strong>Pamela Bonfim</strong>.</li>
-            <li>Objetivo: <strong>Visita comercial</strong>.</li>
-            <li>Data do agendamento: <strong>4 de Novembro de 2024 às 14:00</strong>.</li>
-          </ul>
-          <p></p>
-        </div>
-      </article>
-
-      <article id="6729170c13103009ceaee660" class="feed-message card stack negocio" data-documento="66c63302323e8745b0c47d11">
-        <h3><a href="/negocio/116218/">ALPHA FIT ACADEMIA, Belo Horizonte, MG</a></h3>
-        <div class="feed-message__by-line">
-          <img src="" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:48.">04/11/2024 15:48</span>
-          <h2>Rodrigo Pinheiro</h2>
-        </div>
-        <div class="markdown">        
-          Rodrigo Pinheiro <rodrigo.pinheiro@montele.ind.br>	4 de novembro de 2024 às 15:47
-          Para: Nicole Ribeiro <nicole.ribeiro@montele.ind.br>, Mateus Rodrigues <mateus.rodrigues@montele.ind.br>, Gustavo Oliveira <gustavo.oliveira@montele.ind.br>, engcivilandre@outlook.com.br, jardelmultimarcas@yahoo.com.br
-          Prezados(as), boa tarde!
-          Agradecemos pela parceria no fornecimento do elevador de acessibilidade Montele no projeto da ALPHA FIT ACADEMIA.
-          Conforme vistoria realizada no dia 22/08/2024, gostaria de destacar alguns pontos de atenção que são cruciais para viabilidade técnica de instalação do equipamento:
-          Cintas intermediárias deverão ser executadas nas duas laterais da caixa respeitando distância máxima de 200 cm;
-          Devido a fase inicial da obra, o cliente deverá seguir à risca a Orientação Civil.
-          Nossa equipe de pós-vendas vai acompanhar a execução destas adequações. Serão programadas vistorias e contatos periódicos de forma a auxiliá-los.
-          Todas as modificações a serem executadas para viabilizar a instalação do equipamento MONTELE, bem como suas consequências arquitetônicas e estruturais deverão ser previamente validadas pelo responsável técnico do CLIENTE, em conformidade com a Lei Federal 6496/77 regida pelo CONFEA, e o respectivo documento anotação de responsabilidade técnica ART regido pelo parágrafo 1º da lei discriminada poderá ser exigido a qualquer momento pela equipe técnica da MONTELE.
-          Ficamos no aguardo e à disposição para outras informações.
-          Att.
-          Engº. Rodrigo Pinheiro
-          @nicole.ribeiro
-        </div>
-      </article>
-      
-      <article id="6729170913103009ceaee65d" class="feed-message card stack negocio" data-documento="66f59fc37c86327b0950804b">
-        <h3><a href="/negocio/116852/">RESIDENCIA - MARIA EDUARDA BAUEN, Bragança Paulista, SP</a></h3>
-        <div class="feed-message__by-line">
-          <img src="" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:48.">04/11/2024 15:48</span>
-          <h2>Caroline Moro</h2>
-        </div>
-        <div class="markdown">Follow-up <strong>concluído</strong>.
-          <ul>
-            <li>Responsável: <strong>Caroline Moro</strong>.</li>
-            <li>Objetivo: <strong>Contato</strong>.</li>
-            <li>Data do agendamento: <strong>4 de Novembro de 2024 às 17:00</strong>.</li>
-          </ul>
-          <p></p>
-        </div>
-      </article>  
-
-      <article id="6729170113103009ceaee65c" class="feed-message card stack negocio" data-documento="54804c55cab3974bc9f2ad64">
-        <h3><a href="/negocio/57341/">SEDE UAI NOVA LIMA, Nova Lima, MG</a></h3>
-        <div class="feed-message__by-line">
-          <img src="https://cdn.montele.ficrm.com/trello-logo.png" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:48.">04/11/2024 15:48</span>
-          <h2>Trello Bot</h2>
-        </div>
-        <div class="markdown">
-            <strong>Vistoria MG / 2 / Aguardando Apresentação Interna (handover)</strong>
-            <br/>
-            <br/>
-            <strong>Sistema Montele</strong>: Novo comentário - "
-            Vinculado por **Mateus Rodrigues**
-            PL-15931 (2) - SEDE UAI NOVA LIMA
-            Rua Pereira de Freitas, 84, Nova Lima - MG, 34000000
-            ".
-          </div>
-      </article>
-
-      <article id="6729170113103009ceaee65a" class="feed-message card stack negocio" data-documento="54804c55cab3974bc9f2ad64">
-        <h3><a href="/negocio/57341/">SEDE UAI NOVA LIMA, Nova Lima, MG</a></h3>
-        <div class="feed-message__by-line">
-          <img src="" alt=""/>
-          <span class="feed-when" title="Alteração realizada em 4 de Novembro de 2024 às 15:48.">04/11/2024 15:48</span>
-          <h2>Mateus Rodrigues</h2>
-        </div>
-        <div class="markdown">
-            <strong>Vistoria MG / 2 / Aguardando Apresentação Interna (handover)</strong>
-          <br/>
-          <br/>
-          <strong>Mateus Rodrigues</strong>: Card stack vinculado.
-          </div>
-      </article>
-  
-      <div id="feed-older">Mais…</div>
-    </div>
-    {% include 'modal-checkin.njk' %}
-  </section>
+    {% include "upload.njk" %} 
+    {% include "resources.njk" %}
+    {% include "feedback-cta.njk" %}
+  </main>
+  <footer class="app-layout__footer">
+    {% include "footer.njk" %}
+  </footer>
 </div>
+
+
+
+
+
+

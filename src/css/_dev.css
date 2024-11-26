@@ -1,15 +1,33 @@
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.feedback-cta {
+  h2 {
+    text-align: left;
+  }
 
-  h1 {
-    font-size: var(--size-2);
-    font-weight: 200;
+  .split > :first-child {
+    max-width: 75%;
   }
 }
 
-.feed-page {
-  background-color: hsla(var(--tertiary-hsl), 1);
+.footer {
+  h2 {
+    text-align: left;
+  }
+
+  .split > :first-child {
+    max-width: 40%;
+  }
+
+  img {
+    max-width: 150px;
+  }
+}
+
+.chat-section {
+  height: 100%;
+  padding: var(--space-xl-2xl);
+  background-color: var(--base-color-02-tint);
+}
+
+.docs-section {
+  padding-block: var(--space-l-xl);
 }

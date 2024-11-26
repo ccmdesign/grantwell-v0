@@ -6,7 +6,7 @@
 
 .stack > * {
   margin-block: 0;
-} 
+}
 
 .stack > * + * {
   margin-block-start: var(--_stack-space, 1.5rem);
@@ -19,7 +19,23 @@
   justify-content: flex-start;
   align-items: center;
 }
-  
+
+.split {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: var(--base-gutter);
+
+  > * {
+    flex: 0 1 1;
+  }
+}
+
+.split[data-align="baseline"] {
+  align-items: baseline;
+}
 
 .split-50-50 {
   display: flex;
@@ -29,32 +45,35 @@
 .repel {
   display: flex;
   justify-content: space-between;
+  gap: var(--base-gutter);
 }
 
 .center {
   box-sizing: content-box;
+  padding-inline: var(--space-s);
   margin-inline: auto;
   max-inline-size: var(--_center-measure);
 }
-  
+
 .grid {
+  --_grid-width: 360px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--_grid-width), 1fr));
   gap: var(--base-gutter);
 }
 
 [data-icon]:before,
 .icon {
   font-family: "Material Symbols Outlined";
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 200,
-  'GRAD' 0,
-  'opsz' 24
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 24;
 }
 
 .icon,
 [data-icon]:before {
   content: attr(data-icon);
   font-size: var(--size-3);
+}
+
+.align\:center {
+  align-items: center;
 }

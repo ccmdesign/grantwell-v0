@@ -1,82 +1,30 @@
-.app-layout {
+.app-layout[layout="sidebar"] {
+  height: 100svh;
   display: grid;
-  height: 100dvh;
-  grid-template-columns: auto 0 1fr 0;
+  grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
-  transition: all 0.3s ease;
   grid-template-areas:
-    "gems cdm cdm right"
-    "gems main main right";
+    "top-bar"
+    "main";
 }
 
-.app-layout:has(.app-layout__sidebar-left[aria-hidden="false"]) {
-  grid-template-columns: auto 300px 1fr 0;
-}
+@media screen and (min-width: 468px) {
+  .app-layout[layout="sidebar"] {
+    grid-template-columns: minmax(200px, 20vw) 1fr;
+    grid-template-areas:
+      "top-bar top-bar"
+      "sidebar main";
+  }
 
-.app-layout:has(.app-layout__sidebar-right[aria-hidden="false"]) {
-  grid-template-columns: auto 0 1fr 400px;
-}
+  .app-layout__sidebar {
+    grid-area: sidebar;
+  }
 
-.app-layout:has(.app-layout__sidebar-right[aria-hidden="false"]):has(
-    .app-layout__sidebar-left[aria-hidden="false"]
-  ) {
-  grid-template-columns: auto 300px 1fr 400px;
-}
-
-.app-layout__sidebar-left {
-  grid-column: 2 / 3;
-  grid-row: 1 / 3;
-}
-
-/* 
-Isso é uma possibilidade de termos uma versão fullscreen da gems-sidebar
-Não sei se a atual estrutura do layout suporta bem essa ideia. 
-*/
-.app-layout__sidebar-left[sidebar-size="full"] {
-  grid-column: 2 / 4;
-  grid-row: 1 / 3;
-}
-
-.app-layout__sidebar-right {
-  grid-area: right;
-}
-
-.app-layout__gems {
-  grid-area: gems;
-}
-.app-layout__main {
-  grid-area: main;
-}
-.app-layout__cdm {
-  grid-area: cdm;
-  position: relative;
-}
-
-.app-layout__gems {
-  background-color: var(--base-color);
-}
-
-.app-layout__sidebar-left {
-  background-color: var(--primary-color);
-  max-height: 100dvh;
-  overflow-y: auto;
-  z-index: 1000;
-}
-
-.app-layout__main {
-  background-color: var(--base-color-02-tint);
-  overflow-y: auto;
-}
-
-.app-layout__sidebar-right {
-  background-color: var(--white-color);
-  overflow-y: auto;
-  box-shadow: var(--box-shadow-m);
-}
-
-/* Interactions */
-.app-layout__sidebar-left,
-.app-layout__sidebar-right {
-  position: relative;
-  transition: all 0.3s ease;
+  .app-layout__top-bar {
+    grid-area: top-bar;
+  }
+  .app-layout__main {
+    grid-area: main;
+    overflow-y: auto;
+  }
 }

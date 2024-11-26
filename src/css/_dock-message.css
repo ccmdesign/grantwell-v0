@@ -1,8 +1,0 @@
-.dock-message {
-  border-bottom: var(--base-separator);
-  
-  h3 { 
-    font-size: var(--size-0); 
-    color: var(--primary-color);
-  }
-}

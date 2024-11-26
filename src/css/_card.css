@@ -10,5 +10,13 @@
   box-shadow: var(--_card-box-shadow);
   border-radius: var(--_card-border-radius);
   background-color: white;
-}
 
+  h3 {
+    line-height: 1.35;
+    color: var(--primary-color);
+  }
+
+  p {
+    color: var(--black-color-60-tint);
+  }
+}

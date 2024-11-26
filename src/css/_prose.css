@@ -1,0 +1,19 @@
+.prose {
+  margin-inline: auto;
+  max-width: 70ch;
+
+  > * + * {
+    margin-top: var(--space-xs-s);
+  }
+
+  li {
+    margin-left: var(--space-s-m);
+    list-style: disc;
+    text-indent: -2ch;
+  }
+
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+}
